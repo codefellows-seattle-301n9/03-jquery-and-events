@@ -38,7 +38,12 @@ articleView.populateFilters = function() {
 articleView.handleAuthorFilter = function() {
   $('#author-filter').on('change', function() {
     // REVIEW: Inside this function, "this" is the element that triggered the event handler function we are defining. "$(this)" is using jQuery to select that element (analogous to event.target that we have seen before), so we can chain jQuery methods onto it.
-    if ($(this).val()) {
+    let authorName= $(this).val();
+    if (authorName) {
+      $('articles').hide(500)
+      //This is good up to this point to hide all articles, we still need to show and fadeIn the selected article
+      $('article').show()
+      $('article').fadeIn(500)
       // TODO: If the <select> menu was changed to an option that has a value, we first need to hide all the articles, and then show just the ones that match for the author that was selected.
       // Use an "attribute selector" to find those articles, and fade them in for the reader.
 
