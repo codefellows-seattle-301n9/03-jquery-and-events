@@ -13,7 +13,7 @@ articleView.populateFilters = function() {
       // Start by grabbing the author's name from `this` article element, and then use that bit of text to create the option tag (in a variable named `optionTag`) that we can append to the #author-filter select element.
       authorName = $(this).attr('data-author');
 
-      // TODONE: Refactor this concatenation using a template literal.
+      // DONE: Refactor this concatenation using a template literal.
       optionTag = `<option value=\"${authorName}\">${authorName}</option>`;
 
       if ($('#author-filter option[value="' + authorName + '"]').length === 0) {
@@ -86,13 +86,17 @@ articleView.setTeasers = function() {
   $('#articles').on('click', function(e) {
     e.preventDefault();
     if($(event.target).hasClass('read-on')) {
-      console.log('has read on class');
       $(event.target).siblings().children().show();
       $(event.target).hide();
     }
   });
   // DONE: Add an event handler to reveal all the hidden elements, when the .read-on link is clicked. You can go ahead and hide the "Read On" link once it has been clicked. Be sure to prevent the default link-click action!
   // Ideally, we'd attach this as just one event handler on the #articles section, and let it process (in other words... delegate) any .read-on clicks that happen within child nodes.
+
+  //STRETCH GOAL: Build in functionality such that a user can click on "Show Less" to collapse a full article into a teaser.
+  //Do this by adding a new link "Show less" with a class 'show-less' at the same level as the 'Read on' link.
+  //Create an if statement within the event listener above that if any links are clicked that has the class of 'show-less' any of the target link's sibling's children will be shown, then hide the show-less link and make sure to show the 'read-on' link as well.
+  //target the 'read-on' link as the sibling link of the 'read-less' a tag.
 };
 
 // DONE: Call all of the above functions, once we are sure the DOM is ready.
