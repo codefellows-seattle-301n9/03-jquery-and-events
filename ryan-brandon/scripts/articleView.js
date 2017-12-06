@@ -13,8 +13,8 @@ articleView.populateFilters = function() {
       // Start by grabbing the author's name from `this` article element, and then use that bit of text to create the option tag (in a variable named `optionTag`) that we can append to the #author-filter select element.
       authorName = $(this).attr('data-author');
 
-      // TODO: Refactor this concatenation using a template literal.
-      optionTag = '<option value="' + authorName + '">' + authorName + '</option>';
+      // TODONE: Refactor this concatenation using a template literal.
+      optionTag = $(`<option value=" ${authorName}"> ${authorName} </option>`);
 
       if ($('#author-filter option[value="' + authorName + '"]').length === 0) {
         $('#author-filter').append(optionTag);
@@ -24,8 +24,9 @@ articleView.populateFilters = function() {
       // Avoid duplicates! We don't want to append the category name if the <select> already has this category as an option!
       category = $(this).attr('data-category');
 
-      // TODO: Refactor this concatenation using a template literal.
-      optionTag = '<option value="' + category + '">' + category + '</option>';
+      // TODONE: Refactor this concatenation using a template literal.
+      optionTag = $(`<option value= " ${category}"> ${category} </option>`); 
+      // category repeats three times
 
       if ($('#category-filter option[value="' + category + '"]').length === 0) {
         $('#category-filter').append(optionTag);
@@ -76,5 +77,6 @@ articleView.setTeasers = function() {
 
 // TODO: Call all of the above functions, once we are sure the DOM is ready.
 $(document).ready(function() {
-
+  articleView.populateFilters();
 })
+
