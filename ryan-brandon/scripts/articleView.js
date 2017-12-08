@@ -50,11 +50,12 @@ articleView.handleAuthorFilter = function() {
     } else {
       $('article').fadeIn();
       $('article.template').hide();
+      console.log($('article'));
       // TODONE: If the <select> menu was changed to an option that is blank, we should first show all the articles, except the one article we are using as a template.
 
     }
     $('#category-filter').val('');
-    //what does this do? 
+  
   });
 };
 
@@ -72,7 +73,7 @@ articleView.handleCategoryFilter = function() {
       $('article.template').hide()
     }
     $('#author-filter').val('');
-    //what does this do? 
+  
   });
 };
 
@@ -91,14 +92,27 @@ articleView.handleMainNav = function() {
 
 articleView.setTeasers = function() {
   // REVIEW: Hide elements beyond the first 2 in any article body.
+
   $('.article-body *:nth-of-type(n+2)').hide();
 
-  // TODO: Add an event handler to reveal all the hidden elements, when the .read-on link is clicked. You can go ahead and hide the "Read On" link once it has been clicked. Be sure to prevent the default link-click action!
+  // TODONE: Add an event handler to reveal all the hidden elements, when the .read-on link is clicked. You can go ahead and hide the "Read On" link once it has been clicked. Be sure to prevent the default link-click action!
   // Ideally, we'd attach this as just one event handler on the #articles section, and let it process (in other words... delegate) any .read-on clicks that happen within child nodes.
-
+  $('article').on('click', 'a.read-on', function(e) {
+    e.preventDefault();
+    if ($(this).text() === 'Read on →') {
+      $(this).parent().find('*').fadeIn();
+      $(this).html('Show Less &larr;');
+    } else {
+      $('body').animate({
+        scrollTop: ($(this).parent().offset().top)
+      },200);
+      $(this).html('Read on &rarr;');
+      $(this).parent().find('.article-body *:nth-of-type(n+2)').hide();
+    }
+  });
 };
 
-// TODO: Call all of the above functions, once we are sure the DOM is ready.
+// TODONE: Call all of the above functions, once we are sure the DOM is ready.
 $(document).ready(function() {
   articleView.populateFilters();
   articleView.handleAuthorFilter();
