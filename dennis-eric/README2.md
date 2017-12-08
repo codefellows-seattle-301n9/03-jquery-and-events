@@ -9,16 +9,22 @@ The purpose of this application is to build on the previous lab that creates arr
 
 ## Getting Started
 1. The User must clone the starter code.
-2. The User must create 
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+2. The User must link the .js scripts to the end of HTML
+3. Create event handler type functions for filters
+4. Call the functions for the handler filters 
 
 ## Architecture
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+1. We added a normalize - css style
+2. We added jquery 3.1 library
+
 
 ## Change Log
-<!-- Use this are to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an examples:
 
-01-01-2001 4:59pm - Application now has a fully-functional express server, with GET and POST routes for the book resource.
+Date:   Tue Dec 5 19:00:16 2017 -0800 - Created License
+Date:   Tue Dec 5 21:05:10 2017 -0800 - Completed most of the todos
+Date:   Wed Dec 6 18:28:46 2017 -0800 - Added the js scripts in proper order
+Date:   Wed Dec 6 20:06:26 2017 -0800 - Completed remainin TODO's
+Date:   Thu Dec 7 20:45:38 2017 -0800 - Added article click functions
 
-## Credits and Collaborations
-<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
+Credits and Collaborations
+Thanks to Eric and the TA's
