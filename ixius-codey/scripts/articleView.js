@@ -41,7 +41,7 @@ articleView.handleAuthorFilter = function() {
       // TODONE: If the <select> menu was changed to an option that has a value, we first need to hide all the articles, and then show just the ones that match for the author that was selected.
       // Use an "attribute selector" to find those articles, and fade them in for the reader.
       $('article').hide();
-      $(`article[data-author="'${$(this).val()}'"]`).fadeIn();
+      $(`article[data-author="${$(this).val()}"]`).fadeIn();
     } else {
       // TODO: If the <select> menu was changed to an option that is blank, we should first show all the articles, except the one article we are using as a template.
       $('article').fadeIn();
@@ -62,7 +62,7 @@ articleView.handleCategoryFilter = function() {
     if ($(this).val()) {
 
       $('article').hide();
-      $(`article[data-category="'${$(this).val()}'"]`).fadeIn();
+      $(`article[data-category="${$(this).val()}"]`).fadeIn();
     }else{
       $('article').fadeIn();
       $('article-template').hide();
@@ -95,9 +95,9 @@ articleView.setTeasers = function() {
 
   // TODO: Add an event handler to reveal all the hidden elements, when the .read-on link is clicked. You can go ahead and hide the "Read On" link once it has been clicked. Be sure to prevent the default link-click action!
   // Ideally, we'd attach this as just one event handler on the #articles section, and let it process (in other words... delegate) any .read-on clicks that happen within child nodes.
-  $('article').on('click','a.read-on',function(e){
+  $('article').on('click','a.read-on', function(e){
     e.preventDefault();
-    if($(this).text() ==='Read on &rarr'){
+    if($(this).text() ==='Read on →'){
       $(this).parent().find('*').fadeIn();
       $(this).html('Show less &larr;');
     } else{
