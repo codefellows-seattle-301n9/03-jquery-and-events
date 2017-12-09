@@ -32,7 +32,6 @@ Article.prototype.toHtml = function() {
   return $newArticle;
 };
 
-
 rawData.sort(function(a,b) {
   return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
 });
