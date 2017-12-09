@@ -16,10 +16,11 @@ To Use this repo, fork, clone and create a copy of the starter-code or nick-ambe
 This project utilizes HTML, CSS, JavaScript, Jquery, and Templating.
 
 ## Change Log
-<!-- Use this are to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an examples:
-
+<!-- Use this are to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an examples:-->
+12-05-2017 7:02pm - Application and minimum requirements are now working.
 ## Credits and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
--->
-12-05-2017 7:02pm - Application and minimum requirements are now working.
+* icomoon icons | © 2017 Roonas. All Rights Reserved. | icomoon.io/#icons-icomoon
+* jQuery v3.2.1 | (c) JS Foundation and other contributors | jquery.org/license
+* normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css
 ```
