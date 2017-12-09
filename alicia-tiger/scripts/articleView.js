@@ -14,8 +14,7 @@ articleView.populateFilters = function() {
       authorName = $(this).attr('data-author');
 
       // TODONE: Refactor this concatenation using a template literal.
-      optionTag = '<option value="' + authorName + '">' + authorName + '</option>';
-      //optionTag = $(`<option value=" ${authorName}"> ${authorName} </option>`);
+      optionTag = `<option value="${authorName}">${authorName}</option>`;
 
       if ($('#author-filter option[value="' + authorName + '"]').length === 0) {
         $('#author-filter').append(optionTag);
@@ -26,8 +25,7 @@ articleView.populateFilters = function() {
       category = $(this).attr('data-category');
 
       // TODONE: Refactor this concatenation using a template literal.
-      optionTag = '<option value="' + category + '">' + category + '</option>';
-      //optionTag = $(`<option value=" ${category}"> ${category} </option>`);
+      optionTag = `<option value="${category}">${category}</option>`;
 
       if ($('#category-filter option[value="' + category + '"]').length === 0) {
         //if we don'r have that category add it

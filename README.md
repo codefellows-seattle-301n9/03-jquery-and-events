@@ -75,26 +75,38 @@ _Your repository must include:_
 _Your README.md must include:_
 
 ```md
-# Project Name
+##JQUERY AND EVENTS 
+AUTHORS: Alicia Lycan & Tiger Hsu
 
-**Author**: Your Name Goes Here
-**Version**: 1.0.0 (increment the patch/fix version number up if you make more commits past your first submission)
+**Version**: 1.0.0
 
 ## Overview
-<!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for a Code Fellows 301 class. (i.e. What's your problem domain?) -->
+
+To create a way to be able to filter articles so they can selectively viewed by author or category. Then
+add ability to preview each article to easily view each results and select one to read further.
+Create tab-based navigation to view diffrenet sections of site.
 
 ## Getting Started
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+
+1. Make a copy of the starter code and rename it with your name.
+2. Next, open the html file and add scripts.
+3. Next, open .js files and complete TODO and response items.
+4. Open in browser and confirm responsiveness to see if code if functional.
+5. Upload final edits to git-hub. 
 
 ## Architecture
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+
+The application uses basic HTML, CSS, JavaScript, DOM manipulation, and JQuery.
 
 ## Change Log
-<!-- Use this are to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an examples:
 
-01-01-2001 4:59pm - Application now has a fully-functional express server, with GET and POST routes for the book resource.
+12-07-2017 6:00pm - Completed file setup, and articleView.js TODOs.
+
+12-07-2017 9:00pm - Added hide/show methods and complete articleView.js responses.
+
+12-09-2017 11:00am - Application has fully responsive design. 
+
 
 ## Credits and Collaborations
-<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
--->
-```
+
+This application was pair programmed by Alician Lycan and Tiger Hsu.
