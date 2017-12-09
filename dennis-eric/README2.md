@@ -27,4 +27,4 @@ Date:   Wed Dec 6 20:06:26 2017 -0800 - Completed remainin TODO's
 Date:   Thu Dec 7 20:45:38 2017 -0800 - Added article click functions
 
 Credits and Collaborations
-Thanks to Eric and the TA's
+Thanks to Eric, the TA's, Amber Kim...for helping Eric get his wireless connection working
