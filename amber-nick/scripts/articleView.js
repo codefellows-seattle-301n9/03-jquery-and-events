@@ -89,16 +89,20 @@ articleView.setTeasers = function() {
     e.preventDefault();
     if($(event.target).hasClass('read-on')) {
       $(event.target).siblings().children().show();
-      $(event.target).hide();
+      $(event.target).text('Show Less ←');
+      $(event.target).removeClass('read-on');
+      $(event.target).addClass('show-less');
+    } else if ($(event.target).hasClass('show-less')) {
+      $(event.target).parent().find('*:nth-of-type(n+2)').hide();
+      $(event.target).text('Read on →');
+      $(event.target).removeClass('show-less');
+      $(event.target).addClass('read-on');
     }
   });
   // DONE: Add an event handler to reveal all the hidden elements, when the .read-on link is clicked. You can go ahead and hide the "Read On" link once it has been clicked. Be sure to prevent the default link-click action!
   // Ideally, we'd attach this as just one event handler on the #articles section, and let it process (in other words... delegate) any .read-on clicks that happen within child nodes.
 
-  //STRETCH GOAL: Build in functionality such that a user can click on "Show Less" to collapse a full article into a teaser.
-  //Do this by adding a new link "Show less" with a class 'show-less' at the same level as the 'Read on' link.
-  //Create an if statement within the event listener above that if any links are clicked that has the class of 'show-less' any of the target link's sibling's children will be shown, then hide the show-less link and make sure to show the 'read-on' link as well.
-  //target the 'read-on' link as the sibling link of the 'read-less' a tag.
+  //STRETCH GOAL: DONE!
 };
 
 // DONE: Call all of the above functions, once we are sure the DOM is ready.
