@@ -24,7 +24,7 @@ articleView.populateFilters = function() {
       category = $(this).attr('data-category');
 
       // TODO: Refactor this concatenation using a template literal.
-      optionTag = `<option value = "${category}">${category}</option>`;
+      optionTag = `<option value="${category}">${category}</option>`;
       if ($(`#category-filter option[value="${category}"]`).length === 0) {
         $('#category-filter').append(optionTag);
       }
@@ -80,7 +80,7 @@ articleView.handleCategoryFilter = function() {
     } else {
       $('article').not('.template').show();
     }
-    $('#category-filter').val('');
+    $('#author-filter').val('');
   });
 };
 
