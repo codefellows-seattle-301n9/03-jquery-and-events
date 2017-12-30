@@ -1,4 +1,5 @@
 #### Single-line Summary
+
 **Today, Alicia Lycan and Tiger Hsu paired together. It took about 5 hours.**
 
 #### Reflect and summarize on your process for each `TODO` item :  
