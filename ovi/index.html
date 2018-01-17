@@ -5,12 +5,27 @@
   <title>Lab 3</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="vendor/styles/normalize.css">
-  <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="vendor/styles/icons.css">
+  <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/layout.css">
   <link rel="stylesheet" href="styles/modules.css">
   <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
+
+  <script id="article-template" type="text/x-handlebars-template">
+    <article class="clearfix" data-author="{{author}}" data-category="{{category}}">
+      <header>
+        <h1>{{title}}</h1>
+        <div class="byline">
+          By <address><a href="{{authorUrl}}">{{author}}</a></address>
+          {{publishStatus}}
+        </div>
+      </header>
+      <section class="article-body">{{{body}}}</section>
+      <a href="#" class="read-on">Read on &rarr;</a>
+    </article>
+  </script>
 </head>
+
 <body>
   <header class="site-header clearfix">
     <section class="heading-group-h1">
@@ -74,12 +89,15 @@
   <footer>
     &copy; 2017 Code Fellows | Static Blog | Happy Ipsum!
   </footer>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
   <script src="scripts/blogArticles.js"></script>
   <script src="scripts/article.js"></script>
-  <!-- TODO: Link our new script file in. -->
+  <!-- TODONE: Link our new script file in. -->
+  <script src="scripts/articleView.js"></script>
 
-  <!-- COMMENT: Explain the ordering of your script files. -->
+  <!-- COMMENTED: Explain the ordering of your script files. -->
   <!-- PUT YOUR RESPONSE HERE -->
+  <!-- From what i remember the order does matter, you want to load the files containing the data before you do the init functions that rely on the data. -->
 </body>
 </html>
